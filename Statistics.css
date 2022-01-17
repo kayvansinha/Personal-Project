@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar-thumb {
+    background:gray ;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: black;
+    padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.navbar .content .logo a{
+  text-decoration-line: none;
+    color: white;
+    font-size: 23;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+
+
+.menu-list li a{
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: aqua;
+}
+
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+
+
+section{
+    position: relative;
+    background: black;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.one{
+position:absolute;
+    margin-top: 100;
+top:0;
+right:0;
+bottom:0;
+width:50%;
+    height: 1000px;
+background:black;
+    height: 300%;
+}
+
+.two{
+position:absolute;
+    margin-top: 100;
+top:0;
+left:0;
+bottom:0;
+width:50%;
+background:black;
+height:10%;
+}
+
+.box{
+    position: relative;
+    width: 365px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.2);
+     border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box h3{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box .list{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.box .list:hover{
+    background: white;
+    box-shadow: -15px 30px 50px rgba(0,0,0,0.5);
+    transform: scale(1) translateX(30px) translateY(-15px);
+    z-index: 1000;
+}
+
+.box .list .imgb{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.box .list .imgb img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        object-fit:cover;
+}
+
+.box .list .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+
+
+.box .list:hover .content{
+    color: black;
+}
+
+.box .list .content .rank{
+    position: absolute;
+    right: -50px;
+    color: skyblue;;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.box .list .content .rank small{
+    font-weight: 500;
+    opacity: 0.25;
+}
+
+.box .list:hover .content .rank{
+    right: 11px;
+}
+
+.box a{
+    text-decoration-line: none;
+}
+
+
+.box1{
+    position: relative;
+    width: 365px;
+    min-height: 200px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.2);
+     border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+}
+
+.box1 h3{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box1 .list{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.box1 .list:hover{
+    background: white;
+    box-shadow: -15px 30px 50px rgba(0,0,0,0.5);
+    transform: scale(1) translateX(30px) translateY(-15px);
+    z-index: 1000;
+}
+
+.box1 .list .imgb{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.box1 .list .imgb img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        object-fit:cover;
+}
+
+.box1 .list .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+
+
+.box1 .list:hover .content{
+    color: black;
+}
+
+.box1 .list .content .rank{
+    position: absolute;
+    right: -50px;
+    color: skyblue;;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.box1 .list .content .rank small{
+    font-weight: 500;
+    opacity: 0.25;
+}
+
+.box1 .list:hover .content .rank{
+    right: 11px;
+}
+
+.box1 a{
+    text-decoration-line: none;
+}
+
+.textbox{
+    color: white;
+    text-align: center;
+     background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.2);
+     border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}

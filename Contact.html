@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Simply Crypto</title>
+    <link rel="stylesheet" href="Contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+    <nav class="navbar">
+    <div class="content">
+      <div class="logo1">
+             <a href="Home.html"><h1>Simply Crypto</h1></a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="Introduction.html">Introduction</a></li>
+        <li><a href="Course1.html">Learn</a></li>
+        <li><a href="CryptoNews.html">Crypto News</a></li>
+        <li><a href="Statistics.html">Statisitcs</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+    
+<body>
+          <div class="two">
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Tamil Nadu, Kodaikanal</div>
+          <div class="text-two">Kodaikanal International School</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 9786673024</div>
+   
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">kayvans@kis.in</div>
+        
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Contact Us</div>
+        <p>We hope you learnt a lot about cryptocurrency and are now experienced enough to do your own investing and crypto owning! If you have any comments, feedback or questions, please let us know through this form.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Email">
+        </div>
+        <div class="input-box message-box">
+          <input type="text" placeholder="Message">
+        </div>
+        <div class="button">
+         <a href="Home.html"> <input type="button" value="Submit"></a>
+          </div>
+      </form>
+    </div>
+    </div>
+  </div>
+    </div>
+</body>
+     <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</html>
+
